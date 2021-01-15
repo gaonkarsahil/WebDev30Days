@@ -1,0 +1,100 @@
+Git 
+A Distributed Version Control System.
+https://git-scm.com/
+
+
+Version Control Systems
+Managing multiple versions of documents, programs, web sites etc.
+Essential for team project as well as useful for individual projects.
+e.g :- CVS , Subversion, Mercurial , Git.
+
+
+Why version Control ??
+Can go back to earlier versions.
+Scope of Collaboration with others in team.
+Simplifies conncurrent work, merging changes and resolving conflicts in team.
+Tracking of bugs.
+
+
+Terminologies
+Directory :- A folder or a subfolder. ( Directory is not initialized with the git).
+CLI :- Command Line Interface. 
+Repository :- Saves every bit of committed change. (Directory after initialized with git becomes Repository). Folder tracked by git (will have .git file).
+cd :- shell command for changing directories.
+
+
+Git Vs GitHub
+Git VCS that lets you manage and kepp track of source code history. Its like a software for Managing code.
+Github is a cloud-based hosting service that lets u manage Git repositories.
+You can have git on your local machine and still manage code. You dont have to upload code on Github to use Git.
+Github is place where you can save code online so that others can see it or you can view it.
+
+
+Git Commands
+Clone :- Copy a repository hosted somewhere like Github into a folder on your local machine.
+add :- add your files to the staging area ( place where modified files go before final commit takes place).
+commit :- save youadd/delete/rename) remote (not on your local machine) repositories.
+push :- upload git commits to a remote repo, like GitHub or Bitbucket.
+pull :- download changes from remote repo to yout local machine.
+checkout :- Used to switch between different branches of the code.
+
+
+clone vs pull
+Pull is just pulling out the changes.
+Clone is cloning the entire repository.
+You cant pull unless you have cloned the repository.
+Clone will fetch all the changes from start till now.
+Pull will fetch all the last latest changes and will append to your previous code. 
+Pull when you have same set of information but someone has made some change and you want to get it so you have to pull that particular change.
+
+
+git cmd is run git command by command line interface ( command prompt in windows).
+git bash is a different terminal where you can run git commands.
+git ui is an application window where u can use git directly without commands.
+
+
+Create Repository on Github
++ --> New repository --> "Enter your repository name" --> create repository.
+Add file --> Create new file --> "Name your file" (Readme.md => Markdown file that gives html summary) --> "Enter message in Commit new file -> Commit anew file.
+
+commits will show you history of commits.
+every commit will have different code.
+
+
+Create Repository on Local machine
+git clone 'URL'
+cd 'NEWFolder'
+git status (Changes not staged, modified Readme.md, untracked file abc.html)
+git add . ( git add filename for adding specific file)
+git commit -m " 'MESSAGE' " -m " 'DESCRIPTION' "
+git push origin main ( origin is the link where your repository is stored online and main is the branch name on which we have to push the changes)
+
+
+M :- File that is taken from remote or already existing is being modified. 
+U :- Added a new file in your local so git dont know anything about it from the history so it is untracked.
+A :- Newly created file is added for commit ( untracked file after running add command goes to added state.) so it is add.
+(M U A will not be shown after you commit all changes)
+
+
+Creating new repo first on local machine and pushing to remote
+    make new repository on github online
+    + --> New repository --> "Enter your repository name" --> create repository.
+
+    cd 'NewFolder'
+    git init
+    'ADD SOME FILES AND SAVE THOSE'
+    git status
+    git add .
+    git commit -m " " -m " "
+    git remote add origin 'URL OF THE REPO CREATED ONLINE'
+    git push -u origin main ( -u is for setting upstream and main is the branch name).
+
+
+Branching
+Branching is use to make change which may or may not be added to your main project.
+Mostly we keep one stable/production branch and if there is any issue we create new branch and will fix issues/ add features on new branch and will add to stable branch.
+git checkout -b 'NEWBRANCHNAME'
+
+Added changes on NEWBRANCHNAME
+add commit push 
+Pull requests -> New pull request -> "select base and compare branch" -> create pull request.
