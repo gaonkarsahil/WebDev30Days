@@ -1,0 +1,221 @@
+HTML (Hypertext Markup Language) is not a programming language. 
+It is a markup language that tells web browsers how to structure the web pages you visit.
+
+Tags in HTML are case-insensitive. <h1> Sahil </H1> will work.
+An element consist of opening tag , content and closing tag.
+<tagname>Content</tagname>
+The opening tag consists of less than symbol , tag name , greater than symbol.
+
+
+Closing tags are optional (does not give error) but affects layout and design.
+<H1>menu project<h1>gjvhjvvhj
+output :- 
+menu project
+gjvhjvvhj
+
+
+Nesting tags should be proper otherwise gives unexpected results.
+<p> abc the <b>monster</b></p>
+<p> abc the <b>monster</p></b>
+<p> abc the <b>monster</b> villa</p>
+<p> abc the <b>monster</p> villa</b>
+
+output :- 
+abc the monster
+abc the monster
+abc the monster villa
+abc the monster
+villa
+
+
+Block-level elements :- appears on a new line, with space above and below. 
+div, p , h1 , hr , ul , li , ol , form , table , main , nav , header , footer, aside , article , section.
+
+<p>fourth</p><p>fifth</p><p>sixth</p>
+output :- 
+fourth
+fifth
+sixth
+
+
+Inline elements :- sit on the same line, with no space in between.
+a, b , br , button, em ,i , iframe ,img, input, script, sub, sup, video, span.
+
+<em>first</em><em>second</em><em>third</em>
+output :- 
+firstsecondthird 
+
+
+Empty / Void Elements :-  elements with no content.
+br , hr , img, input , link , meta , param.
+
+
+Attributes :- contain extra information about the element that won't appear in the content.
+Should have space between it and element name, attribute name followed by equal sign and attribute value wrapped with opening and closing quotes.
+An anchor (<a>) can make the text it encloses into a hyperlink.
+href:  web address for the link.
+title: specifies extra information about the link, appears as a tooltip when a cursor hovers over the element.
+target: target="_blank" will display the link in a new tab.
+<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>
+
+
+Boolean attributes :- attributes written without values.
+disabled attribute,wont allow user to make entries. The disabled elements typically have a grayed-out appearance.
+<input type="text" disabled>
+<input type="text">
+
+
+Omitting quotes around attribute values will cause errors or unexpected behavior.
+<a href=https://www.mozilla.org/>favorite website</a>
+
+<a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+the browser misinterprets the markup, mistaking the title attribute for three attributes:  a title attribute with the value The, and two Boolean attributes, Mozilla and homepage.
+
+
+Both single and double quotes are equivalent. 
+Don't mix single quotes and double quotes i.e dont start with one type and end with other type.
+To use quote marks inside other quote marks of the same type (single quote or double quote), use HTML entities.
+< ( &lt; ), >  ( &gt; ), “ ( &quot; ), ’ ( &apos; ), & ( &amp; ).
+
+
+
+Anatomy of an HTML document
+
+<!DOCTYPE html>
+<html>
+       <head>
+    	<meta charset="utf-8">
+    	<title>My test page</title>
+       </head>
+       <body>
+    	<p>This is my page</p>
+      </body>
+</html>
+
+<!DOCTYPE html> :- shortest string of characters that counts as a valid doctype. Earlier doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML.
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+It must only appear once, at the top of the page (before any HTML tags).
+The <!DOCTYPE> declaration is not case sensitive.
+
+
+<html></html> :-  wraps all the content on the page. It is sometimes known as the root element.
+
+<head></head> :- includes keywords and a page description that would appear in search results, CSS to style content, character set declarations. Not part of page content.
+
+<meta charset="utf-8"> :-  UTF-8, which includes most characters from the vast majority of human written languages.With this setting, the page can now handle any textual content it might contain.
+
+<title></title> :-  title of the page that appears in the browser tab the page is loaded in. Also used to describe the page when it is bookmarked.
+
+<body></body> :- contains all the content that displays on the page, including text, images, videos, games, playable audio tracks, or whatever else.
+
+
+HTML comments
+<!-- This is comment -->
+
+
+HTML Headings
+HTML headings are defined with the <h1> to <h6> tags.
+<h1>This is heading 1</h1>
+
+
+HTML Paragraphs
+HTML paragraphs are defined with the <p> tag.
+<p>This is a paragraph.</p>
+
+
+
+HTML Formatting Elements
+designed to display special types of text:
+<b> - Bold text
+<strong> - Important text
+<i> - Italic text
+<em> - Emphasized text
+<mark> - Marked text (highlight)
+<small> - Smaller text
+<del> - Deleted text (strike through)
+<ins> - Inserted text (underline )
+<sub> - Subscript text
+<sup> - Superscript text
+
+
+HTML Links
+HTML <a> tag (anchor tag) defines a hyperlink. 
+<a href="https://www.google.com/" target="_blank">Visit Google</a> 
+
+href :- hypertext reference, defines the link address.
+Absolute URL :- A full web address in the href.
+Relative URL :- A local link (a link to a page within the same website).
+
+target :- attribute specifies where to open the linked document.
+_self - Default. Opens the document in the same window/tab as it was clicked.
+_blank - Opens the document in a new window or tab.
+_parent - Opens the document in the parent frame.
+_top - Opens the document in the full body of the window.
+
+Link title attribute
+title attribute specifies extra information about an element which is shown as a tooltip text when the mouse moves over the element.
+<a href="https://www.google.com/" title="Google Search Enf=gine">Visit Google</a>
+
+
+By default, links will appear as follows in all browsers:
+An unvisited link is underlined and blue.
+A visited link is underlined and purple.
+An active link is underlined and red. (When u click on link it becomes red and underlined).
+
+
+Use the <img> element (inside <a>) to use an image as a link.
+<a href="https://www.google.com/" target="_blank"><img src="smiley.jpg" alt="smiley" style="width:42px;height:42px;"></a>
+
+Use the mailto: scheme inside the href attribute to create a link that opens the user's email program.
+<a href="mailto:someone@example.com">Send email</a>
+
+
+Grouping HTML Elements
+Used frequently to group various other HTML tags. (e.g :- div and span).
+
+<div> tag
+defines a division or a section in an HTML document.
+block level tag which plays a big role in grouping various other HTML tags.
+<div> tag is easily styled by using the class or id attribute.
+This tag does not provide any visual change on the block but this has more meaning when it is used with CSS.
+    <body>
+        <!-- First group -->
+        <div style = "color:red">
+            <h4>First group</h4>
+            <p>Following is a list of red fruits</p>
+            
+            <ul>
+                <li>Red Apple</li>
+                <li>Red Strawberry</li>
+            </ul>
+        </div>
+
+        <!-- Second group -->
+        <div style = "color:green">
+            <h4>Second group</h4>
+            <p>Following is a list of green fruits</p>
+            
+            <ul>
+                <li>Green Apple</li>
+                <li>Green Strawberry</li>
+            </ul>
+        </div>
+    </body>
+
+
+<span> tag
+an inline element and it can be used to group inline-elements in an HTML document.
+This tag also does not provide any visual change on the block but has more meaning when it is used with CSS.
+    <body>
+        <p>This is <span style = "color:red">red</span> and this is
+            <span style = "color:green">green</span>
+        </p>
+    </body>
+
+The difference between the <span> tag and the <div> tag is that the <span> tag is used with inline elements whereas the <div> tag is used with block-level elements.
+
+
+
+All tags in alphabetical order
+https://www.w3schools.com/tags/default.asp
